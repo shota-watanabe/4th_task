@@ -19,6 +19,8 @@ touch config/master.key
 docker-compose up -d
 ```
 
+[localhost:3001](http://localhost:3001/)
+
 #### Database creation
 ```
 docker-compose exec app rails db:create
