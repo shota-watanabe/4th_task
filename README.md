@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### version
+|name|version|
+|--|--|
+|Ruby|3.2.2|
+|Rails|7.1.1|
+|MySQL|8.0.25|
 
-Things you may want to cover:
+### SetUp
+- master.keyを作成し、master keyを設定
 
-* Ruby version
+```
+touch config/master.key
+```
 
-* System dependencies
+#### start server
+```
+docker-compose up -d
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Database creation
+```
+docker-compose exec app rails db:create
+```
