@@ -3,8 +3,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-
-    @tweets = Tweet.all
+    @tweets = Tweet.al
   end
 
   # GET /tweets/1 or /tweets/1.json
@@ -13,7 +12,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets/new
   def new
-    @tweet = Tweet.new
+    @tweet = Tweet.ew
   end
 
   # GET /tweets/1/edit
