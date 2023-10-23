@@ -1,9 +1,9 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: %i[ show edit update destroy ]
+  before_action :set_tweet, only: %i[ show edit update ]
 
   # GET /tweets or /tweets.json
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.al
   end
 
   # GET /tweets/1 or /tweets/1.json
@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets/new
   def new
-    @tweet = Tweet.new
+    @tweet = Tweet.ew
   end
 
   # GET /tweets/1/edit
@@ -44,16 +44,6 @@ class TweetsController < ApplicationController
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /tweets/1 or /tweets/1.json
-  def destroy
-    @tweet.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to tweets_url, notice: "Tweet was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
