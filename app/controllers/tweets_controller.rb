@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: %i[ show edit update ]
+  before_action :set_tweet, only: %i[ show edit update destroy ]
 
   # GET /tweets or /tweets.json
   def index
@@ -45,6 +45,11 @@ class TweetsController < ApplicationController
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def destroy
+    @tweet.destroy
+    redirect_to tweets_url, notice: "Tweet was successfully deleted."
   end
 
   private
